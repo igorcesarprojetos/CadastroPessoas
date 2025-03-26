@@ -1,0 +1,34 @@
+<div class="container">
+
+  <mat-card>
+    <mat-card-content>
+      <form class="cadpf-form">
+        <mat-form-field>
+          <input [required]="true" matInput placeholder="nome" [(ngModel)]="pessoaFisica.Nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [required]="true" matInput placeholder="000.000.000-00" [(ngModel)]="pessoaFisica.CPF" name="cpf">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input [required]="true"  matInput placeholder="00.00.00.00-00" [(ngModel)]="pessoaFisica.RG" name="rg">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [required]="true" type="date" matInput placeholder="DataNascimento" [(ngModel)]="pessoaFisica.DataNascimento" name="datanascimento">
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input [required]="true" matInput placeholder="Profissao" [(ngModel)]="pessoaFisica.Profissao" name="profissao">
+        </mat-form-field>        
+        
+        <button (click)="btnSalvar()" mat-raised-button color="primary" type="submit">Salvar</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>

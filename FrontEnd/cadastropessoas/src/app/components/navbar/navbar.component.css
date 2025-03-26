@@ -1,0 +1,10 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+#quandologado{
+  flex: 0.05 1 auto;
+  text-align: center;  
+}
+
