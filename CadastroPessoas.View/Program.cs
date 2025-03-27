@@ -44,7 +44,7 @@ namespace CadastroPessoas.View
                 app.UseSwaggerUI();
             }
 
-            app.UseCors(x => x.WithOrigins("https://localhost:4200")
+            app.UseCors(x => x.WithOrigins("http://localhost:4200", "https://localhost:4200")
                .AllowAnyMethod()
                .AllowAnyHeader());
 
