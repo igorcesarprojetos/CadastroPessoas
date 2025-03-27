@@ -40,6 +40,6 @@ export class PessoaFisicaService {
 
   //Delete /PessoaFisica/1
   deletePessoaFisica(pessoaFisica:PessoaFisica):Observable<any>{
-    return this.http.delete(`${this.baseUrl}/pessoafisica/${pessoaFisica.Id}`)
+    return this.http.delete(`${this.baseUrl}/pessoafisica/${pessoaFisica.id}`)
   }
 }

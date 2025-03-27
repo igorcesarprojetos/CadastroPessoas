@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,27 +7,31 @@ import { MatTableModule } from '@angular/material/table';
 import { PessoaFisica } from '../../../models/pessoafisica';
 import { PessoaFisicaService } from '../../../services/pessoafisica.service';
 import { MatButtonModule } from '@angular/material/button';
-import { textChangeRangeIsUnchanged } from 'typescript';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import { NgxMaskPipe} from 'ngx-mask';
 
 
-const modules = [MatCardModule,MatFormFieldModule,MatInputModule, FormsModule, MatTableModule, MatIconModule, MatButtonModule]
+const modules = [MatCardModule,MatFormFieldModule,MatInputModule, MatTableModule, MatIconModule, MatButtonModule]
 
 @Component({
   selector: 'app-listapessoafisica',
-  imports: [modules],
+  imports: [modules,DatePipe,NgxMaskPipe],
   templateUrl: './listapessoafisica.component.html',
   styleUrl: './listapessoafisica.component.css'
 })
+
 export class ListaPessoaFisicaComponent implements OnInit {  
 
-  dataSource: PessoaFisica[]=[];
+  dataSource: PessoaFisica[]=[];  
 
-  constructor(private pessoaFisicaService:PessoaFisicaService, private router:Router){
-
+  constructor(private pessoaFisicaService:PessoaFisicaService, private router:Router)
+  {
+    
   }
+
   ngOnInit(): void {
-    this.dataSource=[]
+    this.dataSource=[]    
     this.loadGridPF()
   }
 
@@ -37,8 +40,8 @@ export class ListaPessoaFisicaComponent implements OnInit {
   }
 
   btnSearch(pessoaFisica: PessoaFisica) {
-    if(pessoaFisica!=null && pessoaFisica.Id>0){
-      this.pessoaFisicaService.getById(pessoaFisica.Id).subscribe((response:PessoaFisica)=>{
+    if(pessoaFisica!=null && pessoaFisica.id>0){
+      this.pessoaFisicaService.getById(pessoaFisica.id).subscribe((response:PessoaFisica)=>{
 
       });
     }
