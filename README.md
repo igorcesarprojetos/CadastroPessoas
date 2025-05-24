@@ -38,7 +38,7 @@ Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvol
       
       ng v
 
-7- Acesse seu projeto esecutar no terminal:
+7- Acesse seu projeto executando o seguinte comando no terminal:
       
       cd caminhodesuamaquina\CadastroPessoas\FrontEnd\cadastropessoas
 
