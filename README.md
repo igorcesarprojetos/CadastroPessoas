@@ -4,7 +4,7 @@ Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvol
   git clone https://github.com/igorcesarprojetos/CadastroPessoas.git
 
 3-Para rodar o script do banco de dados se em encontra no projeto da  API em:
-  "seucaminholocal\CadastroPessoas\CadastroPessoas.View\ScriptDataBase\scriptBanco.sql"
+  "caminhodesuamaquina\CadastroPessoas\CadastroPessoas.View\ScriptDataBase\scriptBanco.sql"
 
 4- para rodar o projeto terá que executar a API primeiro no seu visual studio ou VSCode que está em:
   "caminhodesuamaquina\CadastroPessoas\CadastroPessoas.sln"
