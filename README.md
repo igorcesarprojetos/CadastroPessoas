@@ -12,21 +12,31 @@ Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvol
       
       "caminhodesuamaquina\CadastroPessoas\CadastroPessoas.sln"
 
-5- Verifique se o seu node js está instaldo no seu computado senão terá que baixao na versão LTS em :
+5- Verifique se o seu node js está instaldo no seu computador lá no seu painel de controle, senão terá que baixao na versão LTS em :
       
       "https://nodejs.org/pt"
 
-5- Em seguida acessar o front end pode ser de sua IDE de preferência, VSCode e etc:
+6- Em seguida acessar o front end pode ser de sua IDE de preferência, VSCode e etc:
       
       "caminhodesuamaquina\CadastroPessoas\FrontEnd"
 
-6-Caso tenha o angular inslado no seu computador é só rodar no seu terminal o seguinte de comando:
+5- Verificar se tem o angular instalado execute o seguinte comando no terminal:
       
-      'npm install
+      ng v
 
-6.1-Senão tiver o angular terá que isntala-lo utilizando o comando no seu terminal:
+6-Caso tenha o angular inslado no seu computador é só executar um dos seguintes comandos no seu terminal :
+      
+      npm install 
+      ou 
+      npm i
+
+6.1-Senão tiver o angular terá que isntala-lo executando o comando no seu terminal:
       
       npm install -g @angular/cli
+
+6.2- Verificar se o angular foi instalado, executar o seguinte comando no terminal:
+      
+      ng v
 
 7- Acesse seu projeto esecutar no terminal:
       
@@ -41,6 +51,7 @@ Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvol
       ng serve
 
 9- Ao abrir a página de login digite o usuario padrão para acesso ao front end é:
-  Usuario: admin
-  senha: 
-  OBS: O acesso é sem senha.
+
+      Usuario: admin
+      senha: 
+      OBS: O acesso é sem senha.
