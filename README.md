@@ -1,5 +1,5 @@
 Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvolvimento e testes. 
-OBS: Só pra Ler e Cadastrar Pessoa Fisica por enquanto e também falta ajustes e adições, os outros cadastros de usuario e pessoa juridica ainda sendo elaborado.
+OBS: Por enquanto só Lista Cadastra Pessoa Fisica. Falta ajustes e adições, os outros cadastros de usuario e pessoa juridica ainda sendo elaborado.
 
 1-para baixar o projeto para sua maquina, acesse o terminal e digite e execute o seguinte comando:
       
