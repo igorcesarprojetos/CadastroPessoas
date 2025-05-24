@@ -1,4 +1,5 @@
-Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvolvimento e testes.
+Sobre: Aplicação de cadastro de pessoas fisicas e juridicas, ainda em desenvolvimento e testes. 
+OBS: Só pra Ler e Cadastrar Pessoa Fisica por enquanto, os outros cadastros de usuario e pessoa juridica ainda sendo elaborado.
 
 1-para baixar o projeto para sua maquina, acesse o terminal e digite e execute o seguinte comando:
       
