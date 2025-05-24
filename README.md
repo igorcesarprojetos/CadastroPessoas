@@ -11,10 +11,13 @@ senha: "sem senha"
 4- para rodar o projeto terá que executar a API primeiro no seu visual studio ou VSCode que está em:
 "seucaminholocal\CadastroPessoas\CadastroPessoas.sln"
 
+5- Verifique se o seu node js está instaldo no seu computado senão terá que baixao na versão LTS em :
+https://nodejs.org/pt
+
 5- Em seguida acessar o front end:
 "seucaminholocal\CadastroPessoas\FrontEnd"
 
 6-Caso tenha o angular inslado no seu computador é só rodar:
 npm install
 
-6.1-Senão tiver o angular terá que instalar a versão 19
+6.1-Senão tiver o angular terá que isntala-lo
