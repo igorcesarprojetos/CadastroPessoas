@@ -39,7 +39,8 @@ export class PessoaFisicaService {
   }
 
   //Delete /PessoaFisica/1
-  deletePessoaFisica(pessoaFisica:PessoaFisica):Observable<any>{
-    return this.http.delete(`${this.baseUrl}/pessoafisica/${pessoaFisica.id}`)
+  deletePessoaFisica(pessoaFisica:PessoaFisica):Observable<PessoaFisica>{
+    let id: number = pessoaFisica.id;
+    return this.http.delete<PessoaFisica>(`${this.baseUrl}/pessoafisica/${id}`)
   }
 }

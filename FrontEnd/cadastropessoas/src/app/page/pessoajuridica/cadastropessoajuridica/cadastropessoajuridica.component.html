@@ -1,1 +1,30 @@
-<p>cadastropessoajuridica works!</p>
+<div class="container">
+
+  <mat-card>
+    <mat-card-content>
+      <form class="cadpj-form">
+        <mat-form-field>
+          <input [required]="true" matInput placeholder="RazaoSocial" [(ngModel)]="pessoaJuridica.RazaoSocial" name="razaoSocial">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [required]="true" matInput placeholder="NomeFantasia" [(ngModel)]="pessoaJuridica.NomeFantasia" name="nomeFantasia">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input [required]="true" matInput [mask]="mascaraCNPJ" placeholder="00.000.000/0000-00" [(ngModel)]="pessoaJuridica.CNPJ" name="cnpj">
+        </mat-form-field>  
+        
+        
+        <mat-form-field>
+          <input [required]="true" matInput  placeholder="Segmento" [(ngModel)]="pessoaJuridica.Segmento" name="segmento">
+        </mat-form-field>  
+        
+        <button (click)="btnSalvar()" mat-raised-button color="primary" type="submit">Salvar</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+

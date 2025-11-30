@@ -8,7 +8,8 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  baseUrl: string= 'https://jsonplaceholder.typicode.com'
+  //baseUrl: string= 'https://jsonplaceholder.typicode.com'
+  baseUrl: string= 'http://localhost:3000/usuarios'
 
   constructor(private  http:HttpClient) { }
 
@@ -19,7 +20,8 @@ export class UserService {
 
   //Get /users
   getAll():Observable<User[]>{
-    return this.http.get<User[]>(`${this.baseUrl}/users`)
+    //return this.http.get<User[]>(`${this.baseUrl}/users`)
+    return this.http.get<User[]>(`${this.baseUrl}/usuarios`)
   }
   
   //Post /users

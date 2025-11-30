@@ -10,6 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { NgxMaskPipe} from 'ngx-mask';
+import { pipe } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MessageService } from '../../../services/message/message.service';
 
 
 const modules = [MatCardModule,MatFormFieldModule,MatInputModule, MatTableModule, MatIconModule, MatButtonModule]
@@ -25,7 +28,7 @@ export class ListaPessoaFisicaComponent implements OnInit {
 
   dataSource: PessoaFisica[]=[];  
 
-  constructor(private pessoaFisicaService:PessoaFisicaService, private router:Router)
+  constructor(private pessoaFisicaService:PessoaFisicaService, private router:Router, private messageService: MessageService)
   {
     
   }
@@ -36,21 +39,59 @@ export class ListaPessoaFisicaComponent implements OnInit {
   }
 
   btnDeletar(pessoaFisica: PessoaFisica) {
-    this.pessoaFisicaService.deletePessoaFisica(pessoaFisica);
+    this.pessoaFisicaService.deletePessoaFisica(pessoaFisica).subscribe({
+        next: (response) => {
+          this.messageService.showSuccess(`Sucesso:${response}`);
+          // Lógica para sucesso
+        },
+        error: (error) => {
+          this.messageService.showError(`Erro:${error}`);          
+          // Lógica para erro
+        },
+        complete: () => {
+          this.messageService.showSuccess('Operação completada');
+          // Lógica que sempre executa (opcional)
+        }
+      });
   }
 
   btnSearch(pessoaFisica: PessoaFisica) {
     if(pessoaFisica!=null && pessoaFisica.id>0){
-      this.pessoaFisicaService.getById(pessoaFisica.id).subscribe((response:PessoaFisica)=>{
 
+      this.pessoaFisicaService.getById(pessoaFisica.id).subscribe({
+        next: (response:PessoaFisica) => {
+         this.router.navigate([`pessoafisica/cadastro/${response.id}`]) 
+          // Lógica para sucesso
+        },
+        error: (error) => {
+          this.messageService.showError(`Erro:${error}`);          
+          // Lógica para erro
+        },
+        
       });
+
+      //this.pessoaFisicaService.getById(pessoaFisica.id).subscribe((response:PessoaFisica)=>{
+
+      //});
     }
   }
 
   loadGridPF(){
-    return this.pessoaFisicaService.getAll().subscribe((response:PessoaFisica[])=>{
-      this.dataSource=response
-    }); 
+
+     return this.pessoaFisicaService.getAll().subscribe({
+        next: (response:PessoaFisica[]) => {
+         this.dataSource=response
+          // Lógica para sucesso
+        },
+        error: (error) => {
+          this.messageService.showError(`Erro:${error}`);          
+          // Lógica para erro
+        },
+        
+      });
+    // return this.pessoaFisicaService.getAll().subscribe((response:PessoaFisica[])=>{
+    //   this.dataSource=response
+    //}); 
   }
 
   AddPF() {
