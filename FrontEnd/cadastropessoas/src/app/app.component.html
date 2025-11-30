@@ -6,45 +6,55 @@
 
       <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="login">
         <mat-icon aria-hidden="false" aria-label="Example login icon" fontIcon="login"></mat-icon>
-        <span>Login</span>    
-      </mat-list-item>
-      
-      <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" role="listitem" routerLink="home">
-        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-        <span>Home</span>
+        <span>Login</span>
       </mat-list-item>
 
-      <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" role="listitem" routerLink="info">
-        <mat-icon aria-hidden="false" aria-label="Example info icon" fontIcon="info"></mat-icon>
-        <span>Info</span>    
-      </mat-list-item>   
+      @if (isAuth) {
+        <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="home">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+          <span>Home</span>
+        </mat-list-item>
+      }
 
-      <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" role="listitem" routerLink="user">
-        <mat-icon aria-hidden="false" aria-label="Example user icon" fontIcon="person"></mat-icon>
-        <span>User</span>    
-      </mat-list-item>
+      @if (isAuth) {
+        <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="info">
+          <mat-icon aria-hidden="false" aria-label="Example info icon" fontIcon="info"></mat-icon>
+          <span>Info</span>
+        </mat-list-item>
+      }
 
-      <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" role="listitem" routerLink="pessoafisica/lista">
-        <mat-icon aria-hidden="false" aria-label="Example pessoa física icon" fontIcon="person"></mat-icon>
-        <span>Pessoa Física</span>    
-      </mat-list-item>
+      @if (isAuth) {
+        <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="user">
+          <mat-icon aria-hidden="false" aria-label="Example user icon" fontIcon="person"></mat-icon>
+          <span>User</span>
+        </mat-list-item>
+      }
 
-      <mat-list-item *ngIf="isAuth" (click)="drawer.toggle()" role="listitem" routerLink="pessoajuridica/lista">
-        <mat-icon aria-hidden="false" aria-label="Example pessoa jurídica icon" fontIcon="person"></mat-icon>
-        <span>Pessoa Jurídica</span>    
-      </mat-list-item>
+      @if (isAuth) {
+        <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="pessoafisica/lista">
+          <mat-icon aria-hidden="false" aria-label="Example pessoa física icon" fontIcon="person"></mat-icon>
+          <span>Pessoa Física</span>
+        </mat-list-item>
+      }
+
+      @if (isAuth) {
+        <mat-list-item (click)="drawer.toggle()" role="listitem" routerLink="pessoajuridica/lista">
+          <mat-icon aria-hidden="false" aria-label="Example pessoa jurídica icon" fontIcon="person"></mat-icon>
+          <span>Pessoa Jurídica</span>
+        </mat-list-item>
+      }
 
     </mat-list>
-    
+
   </mat-drawer>
 
-  <div class="example-sidenav-content">   
+  <div class="example-sidenav-content">
     <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>
 
-  
+
 <app-footer></app-footer>
 
 

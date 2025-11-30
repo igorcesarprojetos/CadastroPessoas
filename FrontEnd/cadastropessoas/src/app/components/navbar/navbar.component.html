@@ -4,13 +4,15 @@
   </button>
   <span><h1>Cadastro Pessoas</h1></span>
   <span class="example-spacer"></span>
-  <label id="quandologado" >{{usuarioLogado}}</label>    
- 
-  <div *ngIf="IsAuth"> 
-    Logout
-    <button (click)="logout()" mat-icon-button>       
-      <mat-icon aria-hidden="false" aria-label="Example bancos icon" fontIcon="logout">Logout</mat-icon>   
-    </button>
-  </div>
-  
+  <label id="quandologado" >{{usuarioLogado}}</label>
+
+  @if (IsAuth) {
+    <div>
+      Logout
+      <button (click)="logout()" mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Example bancos icon" fontIcon="logout">Logout</mat-icon>
+      </button>
+    </div>
+  }
+
 </mat-toolbar>
